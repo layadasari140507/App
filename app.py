@@ -14,12 +14,12 @@ prompt = st.text_input("Enter your question:")
 if st.button("Send", key="send_button"):
     response = ollama.chat(
         model="llama3.2",
-        messages=[
-            {
+        messages=[{
                 "role": "user",
                 "content": "prompt"
-            }
-        ]
+            }]
     )
 
     st.write(response["message"]["content"])
+
+  
